@@ -1,0 +1,63 @@
+/* 전체 탭 메뉴 스타일 */
+.tab-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px; /* 고정 높이 */
+    background-color: rgb(233, 230, 213);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 약간의 그림자 */
+  }
+  
+  /* 링크 버튼 스타일 */
+  .tab-menu a {
+    flex: 1; /* 버튼 크기를 균등하게 */
+    text-align: center;
+    padding: 13px 0;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff; /* 기본 텍스트 색상 */
+    background-color: rgb(234, 174, 174);
+    border-right: 1px solid #dcdcdc; /* 버튼 간 경계선 */
+    transition: background-color 0.3s ease, color 0.3s ease; /* 전환 효과 */
+  }
+  
+  /* 마지막 버튼 경계선 제거 */
+  .tab-menu a:last-child {
+    border-right: none;
+  }
+  
+  /* 선택된 버튼 스타일 */
+  .tab-menu a.active {
+    background-color: rgb(202, 110, 99); 
+    color: #ffffff; /* 흰색 텍스트 */
+  }
+  
+  /* 호버 효과 */
+  .tab-menu a:hover {
+    background-color: rgb(202, 110, 99);
+  }
+  
+  /* 반응형 디자인 */
+  @media (max-width: 768px) {
+    .tab-menu a {
+      font-size: 0.9rem; /* 글자 크기 줄임 */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .tab-menu {
+      flex-direction: column; /* 버튼을 세로로 나열 */
+      height: auto; /* 높이 자동 조정 */
+    }
+  
+    .tab-menu a {
+      border-right: none;
+      border-bottom: 1px solid #dcdcdc; /* 세로 정렬 시 경계선 변경 */
+    }
+  
+    .tab-menu a:last-child {
+      border-bottom: none; /* 마지막 버튼 경계선 제거 */
+    }
+  }
+  

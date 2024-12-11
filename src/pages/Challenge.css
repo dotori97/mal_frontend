@@ -1,0 +1,52 @@
+.page-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* padding: 20px; */
+    box-sizing: border-box;
+    /* background:url(/public/lightolive.jpg) no-repeat center center fixed; */
+    background-size: cover;
+  }
+  
+  .search-container {
+    display: flex;
+    flex-wrap: wrap; /* 반응형으로 감싸기 */
+    gap: 20px; /* 컴포넌트 간격 */
+    align-items: center; /* 세로 가운데 정렬 */
+    justify-content: center; /* 가로 가운데 정렬 */
+    margin: 20px 0 10px 0; /* 위쪽 10px 간격, 아래쪽 20px 간격 */
+  }
+  
+  .number-input-container {
+    display: flex;
+    align-items: center; /* 숫자 입력란과 버튼을 세로로 정렬 */
+    gap: 10px; /* 입력란과 버튼 사이 간격 */
+  }
+  
+  .number-input-container input {
+    width: 100px; /* 입력 필드 너비 */
+    padding: 5px; /* 입력 필드 안쪽 여백 */
+    font-size: 16px; /* 입력 필드 텍스트 크기 */
+    border: 1px solid #ccc; /* 입력 필드 테두리 색 */
+    border-radius: 4px; /* 테두리에 둥근 모서리 */
+    text-align: center;
+  }
+
+  .page-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  }
+  
+  @media (max-width: 768px) {
+    .search-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .number-input-container input {
+      width: 100%; /* 작은 화면에서는 가로폭 전체 사용 */
+    }
+  }
+  

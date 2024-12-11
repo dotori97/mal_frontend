@@ -1,0 +1,53 @@
+.homepage-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    min-width: 480px;
+    background:url(/public/bg1.jpg) no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* 컴포넌트 간 간격 */
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 800px;
+  }
+
+  .search-box {
+    flex: 1; /* 입력 필드가 남은 공간을 차지 */
+    width: 50%;
+    max-width: 600px;
+    height: 50px;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .button-group button {
+    width: 110px;
+    height: 110px;
+    background-color: rgb(234, 174, 174);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .button-group button:hover {
+    background-color: rgb(202, 110, 99);
+  }
+  

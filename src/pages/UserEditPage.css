@@ -1,0 +1,15 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+.useredit-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* 세로 가운데 정렬 */
+    height: 100vh;
+    min-width: 480px;
+    background:url(/public/bg4.jpg) no-repeat center center fixed;
+    background-size: cover;
+  }

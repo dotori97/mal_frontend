@@ -1,0 +1,203 @@
+/* 전체 컨테이너 */
+.category-container {
+  display: flex; /* flexbox 사용 */
+  align-items: center; /* 세로로 중앙 정렬 */
+  justify-content: flex-start; /* 왼쪽 정렬 */
+  width: 100%; /* 부모의 전체 너비 사용 */
+  position: relative;
+  max-width: 100%;
+}
+
+/* 선택 박스 */
+.category-box {
+width: 100%;
+height: 50px; /* 높이 추가 */
+border: 1px solid grey;
+border-radius: 5px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 15px; /* 패딩 키움 */
+cursor: pointer;
+background: #f0f0f0;  
+font-size: 18px; /* 텍스트 크기 키움 */
+box-sizing: border-box; /* 패딩 및 경계선 포함 */
+}
+
+/* 드롭다운 목록 */
+.category-dropdown {  
+  position: absolute;  
+  left: 0;
+  width: 95%; /* 드롭다운이 선택 박스와 같은 너비를 가지도록 조정 */
+  max-height: 200px; /* 최대 높이 설정 */
+  overflow-y: auto; /* 항목이 많을 경우 스크롤 활성화 */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #d8d8d8; 
+  list-style: none;
+  margin-top: 3px; /* 드롭다운과 선택 박스 사이 간격 */
+  padding: 0; /* 패딩 초기화 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* 드롭다운 항목 */
+.category-item {
+  padding: 10px 15px; /* 간격 조정 */
+  cursor: pointer;
+  border-bottom: 1px solid #eee; /* 항목 사이에 구분선 */
+}
+
+.category-item:last-child {
+  border-bottom: none; /* 마지막 항목 아래에는 구분선 제거 */
+}
+
+.category-item:hover {
+  background-color: #f0f0f0; /* 호버 효과 */
+}
+
+/* 버튼 그룹 */
+.buttons {
+  display: flex;
+  flex-direction: column; /* 버튼들을 수직으로 배치 */
+  margin-left: 10px; /* 카테고리 박스와 버튼 간의 간격 */
+}
+
+/* 추가 버튼 */
+.add-btn {
+  padding: 4px 8px;
+  border-radius: 4px; 
+  background: rgb(37, 114, 131);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background: rgb(30, 78, 89);
+}
+
+/* 삭제 버튼 */
+.remove-btn {
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: rgb(251, 98, 80);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background: rgb(231, 67, 48);
+}
+
+/* 입력 필드 스타일 */
+.category-input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  padding: 0 2px;
+  box-sizing: border-box;
+}
+
+
+/* 경고 메시지 오버레이 */
+.warning-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4); /* 반투명 배경 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* 다른 요소 위에 표시 */
+}
+
+/* 경고 메시지 박스 */
+.warning-box {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* 경고 버튼 그룹 */
+.warning-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.warning-buttons button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.warning-buttons button:first-child {
+  background: #f44336;
+  color: white;
+}
+
+.warning-buttons button:first-child:hover {
+  background: #e53935;
+}
+
+.warning-buttons button:last-child {
+  background: #ddd;
+  color: black;
+}
+
+.warning-buttons button:last-child:hover {
+  background: #ccc;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  /* 화면이 768px 이하일 때 */
+  .category-box {
+    font-size: 16px; /* 폰트 크기 조정 */
+    padding: 0 10px; /* 패딩 줄이기 */
+    height: 40px; /* 높이 줄이기 */
+  }
+
+  .category-dropdown {
+    width: 100%; /* 드롭다운 너비를 부모와 동일하게 */
+  }
+
+  .category-item {
+    padding: 8px 10px; /* 항목 간격 조정 */
+  }
+
+  .add-btn, .remove-btn {
+    padding: 4px 8px; /* 버튼 크기 줄이기 */
+  }
+}
+
+@media (max-width: 480px) {
+  /* 화면이 480px 이하일 때 */
+  .category-box {
+    font-size: 14px; /* 폰트 크기 더 줄이기 */
+    height: 35px; /* 높이 더 줄이기 */
+  }
+
+  .category-input {
+    font-size: 14px; /* 입력 필드 크기 조정 */
+  }
+
+  .buttons {
+    flex-direction: row; /* 버튼을 가로로 배치 */
+  }
+
+  .add-btn, .remove-btn {
+    padding: 4px 6px; /* 버튼 크기 더욱 줄이기 */
+  }
+}

@@ -1,0 +1,73 @@
+/* App.css */
+body {
+  background-color: #f0f0f0; 
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px; /* 고정 높이 */
+  padding: 0 20px;
+  background-color: rgb(21, 68, 78);
+  padding: 1px 10px;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #ddd;
+}
+
+.app {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* 상단 영역 스타일 */
+.header-left p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.header-right button {
+  margin-left: 10px;
+}
+
+/* 중간 영역 스타일 */
+.menu {
+  background-color: #e9ecef;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.menu li {
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+/* 하단 영역 스타일 */
+.main-content {
+  padding: 20px;
+}
+
+.features button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.features button:hover {
+  background-color: #0056b3;
+}
