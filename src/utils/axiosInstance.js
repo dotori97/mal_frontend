@@ -3,7 +3,7 @@ import axios from "axios";
 // Axios 기본 설정
 const axiosInstance = axios.create({
   // baseURL: "https://devleveling.com", // Express 서버 주소
-  baseURL: "http://localhost:3001", // Express 서버 주소
+  baseURL: "https://malmoi-backendymg.azurewebsites.net", // Express 서버 주소
   withCredentials: true, // 인증 정보 포함
 });
 
